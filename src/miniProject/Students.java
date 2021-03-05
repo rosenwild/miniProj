@@ -9,6 +9,16 @@ public class Students implements Serializable {
     String surname;
     int age;
 
+    @Override
+    public String toString() {
+        return "Students{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     public Students(Long id, String name, String surname, int age) {
         this.id = id;
         this.name = name;
