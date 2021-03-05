@@ -30,8 +30,4 @@ public class PackageData implements Serializable {
     public Students getStudent() {
         return student;
     }
-
-    public void setStudent(Students student) {
-        this.student = student;
-    }
 }

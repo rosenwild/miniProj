@@ -2,7 +2,6 @@ package miniProject.data;
 
 import miniProject.DBManager;
 import miniProject.Students;
-import miniProject.data.PackageData;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -10,8 +9,8 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class StudentHandler extends Thread{
-    private Socket socket;
-    private int id;
+    private final Socket socket;
+    private final int id;
     static PackageData response = new PackageData();
 
     public StudentHandler(Socket socket,int id) {
