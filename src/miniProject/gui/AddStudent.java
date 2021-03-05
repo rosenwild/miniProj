@@ -1,5 +1,6 @@
 package miniProject.gui;
 
+import miniProject.DBManager;
 import miniProject.Students;
 import miniProject.data.PackageData;
 
@@ -21,6 +22,9 @@ public class AddStudent extends JPanel {
     private JComboBox ageBox;
 
     public AddStudent(MainFrame parent) {
+
+        DBManager db = new DBManager();
+        db.connect();
 
         for(Integer i = 0; i <150; i++){
             ages[i] = i;
@@ -79,10 +83,7 @@ public class AddStudent extends JPanel {
                         ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
                         ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
                         Students student = new Students(null, name1, surname1, age1);
-                        PackageData packageData = new PackageData();
-                        packageData.setOperationType("AddStudent");
-                        packageData.setStudent(student);
-                        outputStream.writeObject(packageData);
+                        db.addStudents(student);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

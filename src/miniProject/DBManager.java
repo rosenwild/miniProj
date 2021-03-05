@@ -49,7 +49,7 @@ public class DBManager{
 
     public void addStudents(Students students){
         try{
-            PreparedStatement st = connection.prepareStatement("INSERT INTO items(id, name, surname, age) values(NULL,?,?,?)");
+            PreparedStatement st = connection.prepareStatement("INSERT INTO students(id, name, surname, age) values(NULL,?,?,?)");
 
             st.setString(1,students.getName());
             st.setString(2,students.getSurname());
