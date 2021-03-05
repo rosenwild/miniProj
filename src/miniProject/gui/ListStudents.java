@@ -60,8 +60,8 @@ public class ListStudents extends JPanel {
 
         for(int i =0;i<students.size();i++){
             data[i][0] = students.get(i).getName();
-            data[i][0] = students.get(i).getSurname();
-            data[i][0] = students.get(i).getAge();
+            data[i][1] = students.get(i).getSurname();
+            data[i][2] = students.get(i).getAge();
         }
 
         DefaultTableModel model = new DefaultTableModel(data, header);
