@@ -1,17 +1,12 @@
 package miniProject.gui;
 
-
-import miniProject.gui.AddStudent;
-import miniProject.gui.ListStudents;
-import miniProject.gui.MainMenu;
-
 import javax.swing.*;
 
 public class MainFrame extends JFrame {
 
-    private MainMenu mainMenuPage;
-    private AddStudent addStudent;
-    private ListStudents listStudents;
+    private final MainMenu mainMenuPage;
+    private final AddStudent addStudent;
+    private final ListStudents listStudents;
 
     public MainFrame(){
 
